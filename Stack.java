@@ -3,46 +3,29 @@
  * 
  * The stack should hold string data and have a constructor with one
  * integer parameter (the size of the stack).
+ *
+ * You have the freedom to choose how to implement your stack using any
+ * of the data structures we have already studied (arrays, ArrayLists,
+ * linked lists, binary trees, etc.).
  * 
  * @author Michael Ida
  *
  */
 public class Stack implements StackInterface {
 
-	private String[] stackArray;
-	private int stackSize;
-	private int top;
+	// Set up the basic elements of your data structure here.
 	
+	/*
+	 * This is the constructor for the Stack class.  Notice
+	 * there is one integer parameter (the size of the stack).
+	 */
 	public Stack(int size) {
-		stackSize = size;
-		stackArray = new String[size];
-		top = -1;
+		// Your code here
 	}
 	
-	public boolean push(String record) {
-		if (top == stackSize - 1) {
-			return false;
-		} else {
-			top++;
-			stackArray[top] = record;
-			return true;
-		}
-	}
-	
-	public String pop() {
-		if (top < 0) {
-			return "";
-		} else {
-			top--;
-			return stackArray[top + 1];
-		}
-	}
-	
-	public void printStack() {
-		for (int i = top; i >= 0; i--) {
-			System.out.println(stackArray[i]);
-		}
-		System.out.println();
-	}
+	/*
+	 * Implement the other methods specified
+	 * in the interface below.
+	 */
 	
 }
